@@ -1,0 +1,1993 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Michelle Wright | Ginecóloga y Oncóloga</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2b7a78;
+            --primary-dark: #1a5a59;
+            --secondary: #17252a;
+            --accent: #feffff;
+            --light: #def2f1;
+            --highlight: #3aafa9;
+            --text: #333333;
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--accent);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--highlight);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            border: 2px solid var(--highlight);
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(58, 175, 169, 0.3);
+            letter-spacing: 0.5px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(58, 175, 169, 0.5);
+            background: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary);
+        }
+        
+        section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--highlight);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            color: var(--text);
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--accent);
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.08);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        header.scrolled {
+            padding: 10px 0;
+            background: rgba(254, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 0;
+            transition: var(--transition);
+        }
+        
+        header.scrolled nav {
+            padding: 5px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--highlight), var(--primary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: white;
+            font-size: 24px;
+        }
+        
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .logo-text span {
+            color: var(--highlight);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary);
+            font-weight: 500;
+            position: relative;
+            font-size: 16px;
+            padding: 8px 3px;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background: var(--highlight);
+            bottom: 0;
+            left: 0;
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(43, 122, 120, 0.7) 0%, rgba(26, 90, 89, 0.8) 100%);
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: white;
+            line-height: 1.2;
+            animation: fadeInDown 1s ease;
+        }
+        
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s ease 0.3s forwards;
+            opacity: 0;
+        }
+        
+        .hero-btns {
+            animation: fadeInUp 1s ease 0.6s forwards;
+            opacity: 0;
+        }
+        
+        /* About Section */
+        .about {
+            background: var(--light);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about:before {
+            content: '';
+            position: absolute;
+            top: -150px;
+            right: -150px;
+            width: 400px;
+            height: 400px;
+            background: var(--highlight);
+            border-radius: 50%;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .about-img {
+            flex: 1;
+            position: relative;
+            perspective: 1000px;
+        }
+        
+        .profile-frame {
+            position: relative;
+            width: 100%;
+            padding-top: 100%;
+            border-radius: 20px;
+            transform-style: preserve-3d;
+            transform: rotateY(0deg);
+            transition: var(--transition);
+        }
+        
+        .about-img:hover .profile-frame {
+            transform: rotateY(10deg);
+        }
+        
+        .profile-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            transform: translateZ(30px);
+            transition: var(--transition);
+            border: 10px solid white;
+        }
+        
+        .about-img:hover .profile-image {
+            transform: translateZ(40px) scale(1.03);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+        }
+        
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .about-img:hover .profile-image img {
+            transform: scale(1.05);
+        }
+        
+        .profile-border {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            border: 3px solid var(--highlight);
+            border-radius: 30px;
+            transform: translateZ(10px);
+            transition: var(--transition);
+        }
+        
+        .about-img:hover .profile-border {
+            transform: translateZ(0);
+            border-width: 4px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 25px;
+            color: var(--primary);
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .skills {
+            margin-top: 30px;
+        }
+        
+        .skills h4 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .skill-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .skill-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: var(--highlight);
+            font-size: 18px;
+        }
+        
+        /* Services Section */
+        .services {
+            background: var(--accent);
+            position: relative;
+        }
+        
+        .services:before {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            background: var(--highlight);
+            border-radius: 50%;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .service-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background: linear-gradient(135deg, var(--highlight), var(--primary));
+            z-index: -1;
+            transition: var(--transition);
+            opacity: 0.9;
+        }
+        
+        .service-card:hover:before {
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(58, 175, 169, 0.2);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 32px;
+            color: var(--highlight);
+            transition: var(--transition);
+        }
+        
+        .service-card:hover .service-icon {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+        
+        .service-card p {
+            transition: var(--transition);
+        }
+        
+        .service-card:hover h3,
+        .service-card:hover p {
+            color: white;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background: var(--light);
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        
+        .testimonial-card:before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 80px;
+            font-family: 'Playfair Display', serif;
+            color: var(--highlight);
+            opacity: 0.2;
+            line-height: 1;
+        }
+        
+        .testimonial-content {
+            padding: 20px 0;
+            font-style: italic;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text);
+            margin-bottom: 25px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 20px;
+            border: 4px solid var(--light);
+        }
+        
+        .author-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+        
+        .author-info span {
+            color: var(--text);
+            font-size: 0.9rem;
+        }
+        
+        /* Laser Section */
+        .laser {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .laser:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1581595219317-97e6d1bff9ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        
+        .laser .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .laser-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .laser-content h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .laser-content p {
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .laser-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .benefit-card i {
+            font-size: 40px;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .benefit-card h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .laser-applications {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 50px;
+            justify-content: center;
+        }
+        
+        .application-card {
+            flex: 1;
+            min-width: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .application-card h3 {
+            color: white;
+            margin-bottom: 20px;
+            text-align: center;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--highlight);
+        }
+        
+        .application-card ul {
+            list-style: none;
+        }
+        
+        .application-card li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .application-card li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--highlight);
+            font-weight: bold;
+        }
+        
+        /* Before After Section */
+        .before-after {
+            background: var(--accent);
+            padding: 100px 0;
+        }
+        
+        .ba-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .ba-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+        }
+        
+        .ba-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .ba-images {
+            display: flex;
+            position: relative;
+            height: 300px;
+        }
+        
+        .ba-before, .ba-after {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .ba-before:before, .ba-after:before {
+            content: 'ANTES';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            z-index: 2;
+        }
+        
+        .ba-after:before {
+            content: 'DESPUÉS';
+            background: var(--highlight);
+        }
+        
+        .ba-images img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .ba-card:hover .ba-images img {
+            transform: scale(1.05);
+        }
+        
+        .ba-content {
+            padding: 30px;
+        }
+        
+        .ba-content h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .notes-section {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .notes-section h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .notes-section p {
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+        
+        /* Products Section */
+        .products {
+            background: var(--light);
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-img {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .product-card:hover .product-img img {
+            transform: scale(1.1);
+        }
+        
+        .product-content {
+            padding: 30px;
+        }
+        
+        .product-content h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .product-content p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        /* Appointment Section */
+        .appointment {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .appointment:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1581595219317-97e6d1bff9ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        
+        .appointment .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .appointment h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .appointment p {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+        }
+        
+        .appointment-options {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .option-card {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 40px 30px;
+            border-radius: 20px;
+            width: 280px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition);
+        }
+        
+        .option-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .option-card i {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .option-card h3 {
+            margin-bottom: 15px;
+            color: white;
+        }
+        
+        .option-card p {
+            margin-bottom: 0;
+            font-size: 1.1rem;
+        }
+        
+        /* Blog Section */
+        .blog {
+            background: var(--accent);
+            position: relative;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .blog-img {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .blog-img:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+            z-index: 1;
+        }
+        
+        .blog-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .blog-card:hover .blog-img img {
+            transform: scale(1.1);
+        }
+        
+        .blog-category {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--highlight);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+        
+        .blog-content {
+            padding: 30px;
+        }
+        
+        .blog-content h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .blog-content p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            color: var(--highlight);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .read-more i {
+            margin-left: 8px;
+            transition: var(--transition);
+        }
+        
+        .read-more:hover {
+            color: var(--primary);
+        }
+        
+        .read-more:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: var(--light);
+            position: relative;
+        }
+        
+        .contact-container {
+            display: flex;
+            gap: 50px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-info h3 {
+            color: var(--primary);
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            color: var(--highlight);
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        
+        .contact-details p {
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: var(--highlight);
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 20px;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-5px);
+            background: var(--primary);
+        }
+        
+        .contact-form {
+            flex: 1;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+        
+        .contact-form h3 {
+            color: var(--primary);
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--secondary);
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e1e1e1;
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 16px;
+            transition: var(--transition);
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--highlight);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(58, 175, 169, 0.2);
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 1.4rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h4:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--highlight);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-links a i {
+            margin-right: 10px;
+            color: var(--highlight);
+            font-size: 14px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--highlight);
+            transform: translateX(5px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .contact-container {
+                flex-direction: column;
+            }
+            
+            .laser-applications {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .appointment-options {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .ba-images {
+                height: 200px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            section {
+                padding: 70px 0;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            
+            .btn {
+                padding: 12px 25px;
+                font-size: 14px;
+                display: block;
+                margin: 10px auto;
+                max-width: 250px;
+            }
+            
+            .skills-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="logo-text">Dra. Michelle <span>Wright</span></div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre Mí</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#laser">Láser CO₂</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Dra. Michelle Wright Samuels</h1>
+                <p>Especialista en Ginecología y Oncología con enfoque integral en la salud femenina. Atención personalizada en el Centro Médico Momentum Pinares.</p>
+                <div class="hero-btns">
+                    <a href="#citas" class="btn">Solicitar Cita</a>
+                    <a href="#servicios" class="btn btn-outline">Nuestros Servicios</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre-mi" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sobre Mí</h2>
+                <p>Conozca mi trayectoria profesional y enfoque médico</p>
+            </div>
+            <div class="about-content">
+                <div class="about-img">
+                    <div class="profile-frame">
+                        <div class="profile-image">
+                            <img src="https://i.ibb.co/Ghx3XPP/IMG-20240424-WA0004.jpg?width=800&height=800&fit=cover" 
+                                 alt="Dra. Michelle Wright Samuels"
+                                 loading="eager">
+                        </div>
+                        <div class="profile-border"></div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Especialista en Ginecología y Oncología</h3>
+                    <p>Graduada con honores de la Universidad de Costa Rica (UCR), con más de 15 años de experiencia en el cuidado de la salud femenina. Mi enfoque combina la excelencia médica con una atención cálida y personalizada.</p>
+                    <p>Como especialista en oncología ginecológica, me dedico a la prevención, diagnóstico y tratamiento de cánceres femeninos, con énfasis en el cáncer de mama y cáncer cervicouterino.</p>
+                    <p>En Vitali Medical, ubicado en la Torre Médica Momentum Pinares, ofrecemos un ambiente seguro y confortable donde cada paciente recibe atención individualizada según sus necesidades específicas.</p>
+                    
+                    <div class="skills">
+                        <h4>Áreas de Especialización</h4>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-uterus"></i>
+                                </div>
+                                <div>
+                                    <h5>Ginecología Oncológica</h5>
+                                    <p>Prevención y tratamiento</p>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-dna"></i>
+                                </div>
+                                <div>
+                                    <h5>Medicina Reproductiva</h5>
+                                    <p>Salud y bienestar</p>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-breastfeeding"></i>
+                                </div>
+                                <div>
+                                    <h5>Cáncer de Mama</h5>
+                                    <p>Detección temprana</p>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-microscope"></i>
+                                </div>
+                                <div>
+                                    <h5>Procedimientos</h5>
+                                    <p>Diagnósticos avanzados</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Servicios</h2>
+                <p>Ofrecemos atención especializada en todas las áreas de ginecología y oncología</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-uterus"></i>
+                    </div>
+                    <h3>Ginecología General</h3>
+                    <p>Revisiones anuales, planificación familiar, manejo de trastornos menstruales y atención integral de la salud reproductiva.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-dna"></i>
+                    </div>
+                    <h3>Oncología Ginecológica</h3>
+                    <p>Prevención, diagnóstico y tratamiento de cánceres femeninos con enfoque multidisciplinario y técnicas avanzadas.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3>Salud Reproductiva</h3>
+                    <p>Seguimiento de embarazo, evaluación de fertilidad y manejo de condiciones que afectan la reproducción.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laser"></i>
+                    </div>
+                    <h3>Ginecología Láser CO₂</h3>
+                    <p>Tratamiento avanzado de enfermedades del tracto genital femenino con mínima invasión y rápida recuperación.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Colposcopía y Biopsias</h3>
+                    <p>Procedimientos diagnósticos para evaluación de lesiones cervicales y otras condiciones ginecológicas.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Menopausia y Climaterio</h3>
+                    <p>Manejo integral de los cambios hormonales y sus efectos en la salud y calidad de vida de la mujer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Testimonios de Pacientes</h2>
+                <p>Lo que nuestras pacientes dicen sobre su experiencia</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"La Dra. Wright cambió mi vida. Después de años de sufrir con endometriosis, su tratamiento con láser me devolvió la calidad de vida que había perdido. Su profesionalismo y calidez son incomparables."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=80" alt="Ana M.">
+                        </div>
+                        <div class="author-info">
+                            <h4>Ana Martínez</h4>
+                            <span>Tratamiento de Endometriosis</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"El tratamiento con láser CO₂ para mis condilomas fue rápido, indoloro y con una recuperación sorprendentemente rápida. La Dra. Wright explica todo con claridad y hace que te sientas segura en todo momento."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://images.unsplash.com/photo-1507101105822-7472b28e22ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=80" alt="Laura R.">
+                        </div>
+                        <div class="author-info">
+                            <h4>Laura Rodríguez</h4>
+                            <span>Tratamiento con Láser CO₂</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Como sobreviviente de cáncer de mama, la atención integral de la Dra. Wright fue fundamental en mi recuperación. Su enfoque humano y profesional me dio la fuerza para superar esta difícil etapa."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=80" alt="María C.">
+                        </div>
+                        <div class="author-info">
+                            <h4>María Castro</h4>
+                            <span>Sobreviviente de Cáncer de Mama</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Laser Section -->
+    <section id="laser" class="laser">
+        <div class="container">
+            <div class="laser-content">
+                <h2>Ginecología Láser CO₂</h2>
+                <p>Los láseres de CO₂ se utilizan para el tratamiento de numerosas enfermedades del tracto genital femenino con aplicaciones en colposcopia y laparoscopia, obteniéndose numerosas ventajas con respecto a técnicas más tradicionales.</p>
+                
+                <div class="laser-benefits">
+                    <div class="benefit-card">
+                        <i class="fas fa-heartbeat"></i>
+                        <h3>Mínima Invasión</h3>
+                        <p>Procedimientos menos invasivos con menor daño al tejido circundante.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Recuperación Rápida</h3>
+                        <p>Menor tiempo de recuperación y reducción de complicaciones postoperatorias.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-bullseye"></i>
+                        <h3>Precisión Quirúrgica</h3>
+                        <p>Control total de la profundidad de acción durante la cirugía.</p>
+                    </div>
+                </div>
+                
+                <div class="laser-applications">
+                    <div class="application-card">
+                        <h3>Colposcopia</h3>
+                        <ul>
+                            <li>Condilomas acuminados del cuello uterino, vagina y vulva</li>
+                            <li>Quistes y abscesos de las glándulas de Bartolin</li>
+                            <li>Neoplasia cervical intraepitelial (NIC)</li>
+                            <li>Carcinomas invasivos o en fase inicial (IA1)</li>
+                            <li>Patologías de cúpula y bóveda vaginal</li>
+                            <li>Pólipos y fístulas perivulvares</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="application-card">
+                        <h3>Laparoscopia</h3>
+                        <ul>
+                            <li>Endometriosis</li>
+                            <li>Adherencias</li>
+                            <li>Miomas y fibroides uterinos</li>
+                            <li>Salpingostomía y Fimbrioplastia</li>
+                            <li>Microcirugía de la trompa de Falopio</li>
+                            <li>Ooforectomía y Ovariectomía</li>
+                            <li>Incisión ovárica para poliquistosis ovárica</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before After Section -->
+    <section class="before-after">
+        <div class="container">
+            <div class="section-title">
+                <h2>Antes y Después</h2>
+                <p>Resultados reales de nuestros tratamientos con láser CO₂</p>
+            </div>
+            <div class="ba-grid">
+                <div class="ba-card">
+                    <div class="ba-images">
+                        <div class="ba-before">
+                            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Antes">
+                        </div>
+                        <div class="ba-after">
+                            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Después">
+                        </div>
+                    </div>
+                    <div class="ba-content">
+                        <h3>Tratamiento de Condilomas</h3>
+                        <p>Paciente de 32 años con condilomas acuminados en zona vulvar. Tratamiento realizado con láser CO₂ en una sesión.</p>
+                        <div class="notes-section">
+                            <h4>Notas del Tratamiento</h4>
+                            <p>El procedimiento duró 20 minutos bajo anestesia local. La paciente reportó mínimas molestias postoperatorias y retornó a sus actividades normales en 48 horas. Resultados visibles a las 3 semanas.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ba-card">
+                    <div class="ba-images">
+                        <div class="ba-before">
+                            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Antes">
+                        </div>
+                        <div class="ba-after">
+                            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Después">
+                        </div>
+                    </div>
+                    <div class="ba-content">
+                        <h3>Endometriosis Pélvica</h3>
+                        <p>Paciente de 38 años con endometriosis grado III. Tratamiento laparoscópico con láser CO₂.</p>
+                        <div class="notes-section">
+                            <h4>Notas del Tratamiento</h4>
+                            <p>Cirugía realizada en 1.5 horas. Se eliminaron todos los focos de endometriosis sin dañar tejido sano circundante. Recuperación completa en 7 días. La paciente reportó desaparición completa del dolor pélvico.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ba-card">
+                    <div class="ba-images">
+                        <div class="ba-before">
+                            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Antes">
+                        </div>
+                        <div class="ba-after">
+                            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Después">
+                        </div>
+                    </div>
+                    <div class="ba-content">
+                        <h3>Rejuvenecimiento Vaginal</h3>
+                        <p>Paciente de 45 años con atrofia vaginal posmenopáusica. Tratamiento con láser CO₂.</p>
+                        <div class="notes-section">
+                            <h4>Notas del Tratamiento</h4>
+                            <p>Tres sesiones de 15 minutos cada una, espaciadas por 4 semanas. Mejoría significativa en la sequedad vaginal y dispareunia. La paciente reportó mejor calidad de vida sexual a las 12 semanas post-tratamiento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tecnología Avanzada</h2>
+                <p>Equipos de última generación para su tratamiento</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1581595219317-97e6d1bff9ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Láser CO₂">
+                    </div>
+                    <div class="product-content">
+                        <h3>Láser CO₂ SmartXide²</h3>
+                        <p>Sistema de láser de CO₂ de última generación para tratamientos ginecológicos mínimamente invasivos con máxima precisión.</p>
+                        <div class="notes-section">
+                            <h4>Características Principales</h4>
+                            <p>• Precisión micrométrica<br>• Control de profundidad ajustable<br>• Mínimo daño térmico<br>• Recuperación acelerada</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1581595219317-97e6d1bff9ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Colposcopio">
+                    </div>
+                    <div class="product-content">
+                        <h3>Colposcopio Digital HD</h3>
+                        <p>Sistema de diagnóstico avanzado con capacidad de aumento y captura de imágenes de alta resolución para evaluación precisa.</p>
+                        <div class="notes-section">
+                            <h4>Características Principales</h4>
+                            <p>• Imágenes HD de 4K<br>• Sistema de grabación integrado<br>• Luz fría LED<br>• Software de análisis de imágenes</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1581595219317-97e6d1bff9ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Ecógrafo">
+                    </div>
+                    <div class="product-content">
+                        <h3>Ecógrafo 4D</h3>
+                        <p>Tecnología de ultrasonido avanzada para diagnóstico ginecológico y monitoreo del embarazo con imágenes tridimensionales.</p>
+                        <div class="notes-section">
+                            <h4>Características Principales</h4>
+                            <p>• Imágenes 3D/4D en tiempo real<br>• Doppler color avanzado<br>• Software de análisis volumétrico<br>• Resolución HD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section id="citas" class="appointment">
+        <div class="container">
+            <h2>Agenda tu Cita</h2>
+            <p>Ofrecemos múltiples canales para que programes tu consulta de manera rápida y sencilla</p>
+            
+            <div class="appointment-options">
+                <div class="option-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Teléfono</h3>
+                    <p>+506 4040 0808</p>
+                    <p>8379-9494</p>
+                </div>
+                <div class="option-card">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>6189-7599</p>
+                    <p>8679-9551</p>
+                </div>
+                <div class="option-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Google Calendar</h3>
+                    <a href="#" class="btn" style="margin-top: 15px; padding: 12px 25px; background: white; color: var(--primary);">Agendar Online</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <div class="section-title">
+                <h2>Blog Educativo</h2>
+                <p>Artículos informativos sobre salud femenina y prevención</p>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Prevención cáncer">
+                        <div class="blog-category">Prevención</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Prevención del Cáncer Ginecológico</h3>
+                        <p>Conoce las estrategias más efectivas para reducir tu riesgo de desarrollar cánceres femeninos y la importancia de los chequeos regulares.</p>
+                        <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1579165466741-920c5c2450a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Salud mamaria">
+                        <div class="blog-category">Autoexamen</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Autoexamen Mamario: Guía Completa</h3>
+                        <p>Aprende la técnica correcta para realizar el autoexamen de mamas y qué cambios debes reportar inmediatamente a tu especialista.</p>
+                        <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1581595219317-97e6d1bff9ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Láser">
+                        <div class="blog-category">Láser CO₂</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Ginecología Láser: Innovación en Tratamientos</h3>
+                        <p>Descubre cómo la tecnología láser CO₂ está revolucionando el tratamiento de condiciones ginecológicas con mínima invasión y rápida recuperación.</p>
+                        <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contacto</h2>
+                <p>Estamos aquí para responder todas tus preguntas</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <p><strong>Dirección</strong></p>
+                            <p>Torre Médica Momentum Pinares, San José, Costa Rica</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <p><strong>Teléfonos</strong></p>
+                            <p>+506 4040 0808 (Citas)</p>
+                            <p>8379-9494 (Información)</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-details">
+                            <p><strong>WhatsApp</strong></p>
+                            <p>6189-7599</p>
+                            <p>8679-9551</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <p><strong>Horario de Atención</strong></p>
+                            <p>Lunes a Viernes: 8:00 am - 5:00 pm</p>
+                            <p>Sábados: 9:00 am - 12:00 md</p>
+                        </div>
+                    </div>
+                    
+                    <h3 style="margin-top: 40px;">Sígueme</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Envíanos un Mensaje</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Nombre completo</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Asunto</label>
+                            <select id="subject">
+                                <option value="cita">Solicitud de cita</option>
+                                <option value="consulta">Consulta general</option>
+                                <option value="resultados">Resultados de exámenes</option>
+                                <option value="laser">Consulta sobre láser CO₂</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4>Dra. Michelle Wright</h4>
+                    <p>Especialista en Ginecología y Oncología con más de 15 años de experiencia en el cuidado integral de la salud femenina.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#inicio"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+                        <li><a href="#sobre-mi"><i class="fas fa-chevron-right"></i> Sobre Mí</a></li>
+                        <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Servicios</a></li>
+                        <li><a href="#laser"><i class="fas fa-chevron-right"></i> Láser CO₂</a></li>
+                        <li><a href="#blog"><i class="fas fa-chevron-right"></i> Blog Educativo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Servicios</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Ginecología Oncológica</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Salud Reproductiva</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Ginecología Láser</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Menopausia</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Procedimientos Diagnósticos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Torre Médica Momentum Pinares</a></li>
+                        <li><a href="tel:+50640400808"><i class="fas fa-phone-alt"></i> +506 4040 0808</a></li>
+                        <li><a href="https://wa.me/50661897599"><i class="fab fa-whatsapp"></i> WhatsApp: 6189-7599</a></li>
+                        <li><a href="mailto:info@dramichelle.com"><i class="fas fa-envelope"></i> info@dramichelle.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Dra. Michelle Wright Samuels. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Google Calendar integration
+        document.querySelector('.appointment-options .btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Se abrirá el sistema de citas online con Google Calendar');
+            // window.open('URL_DE_GOOGLE_CALENDAR', '_blank');
+        });
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+        
+        // Initialize animations
+        window.addEventListener('load', function() {
+            // Add any initialization code here
+        });
+    </script>
+</body>
+</html>
