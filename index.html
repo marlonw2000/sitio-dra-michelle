@@ -213,16 +213,15 @@
         .logo-icon {
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, var(--highlight), var(--primary));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-right: 15px;
-            color: white;
-            font-size: 28px;
+            overflow: hidden;
             transition: var(--transition);
             box-shadow: var(--shadow-sm);
+            border: 2px solid white;
         }
         
         header.scrolled .logo-icon {
@@ -920,6 +919,17 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             transition: var(--transition);
+        }
+        
+        .laser-image img {
+            transition: var(--transition);
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        .application-card:hover .laser-image img {
+            transform: scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            border-color: var(--highlight);
         }
         
         .application-card:hover {
@@ -1947,7 +1957,7 @@
             <nav>
                 <div class="logo">
                     <div class="logo-icon">
-                        <i class="fas fa-heartbeat"></i>
+                        <img src="https://i.ibb.co/PVYLsqT/6e5ee1ff04e3025717f72941657d0a91.jpg" alt="Dra. Michelle Wright" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
                     </div>
                     <div class="logo-text">Dra. Michelle <span>Wright</span></div>
                 </div>
@@ -1994,10 +2004,10 @@
             <div class="about-content">
                 <div class="about-img">
                     <div class="profile-frame">
-                        <div class="profile-image">
-                            <img src="https://i.ibb.co/Ghx3XPP/IMG-20240424-WA0004.jpg?width=1200&height=1200&fit=cover" 
-                                 alt="Dra. Michelle Wright Samuels"
-                                 loading="eager">
+                        <div class="profile-image" style="padding-top: 15px;">
+                            <img src="https://i.ibb.co/LdYtq63Y/IMG-20250529-202553.jpg" 
+                                 alt="Dra. Michelle Wright Samuels - Oncóloga y Ginecóloga"
+                                 loading="eager" style="object-position: center 15%;">
                         </div>
                         <div class="profile-border"></div>
                     </div>
@@ -2191,6 +2201,9 @@
                 
                 <div class="laser-applications">
                     <div class="application-card">
+                        <div class="laser-image" style="text-align: center; margin-bottom: 30px;">
+                            <img src="https://i.ibb.co/YF14r1zk/Punto-Close-Up-WP-1-1024x1024-2.png" alt="Ginecología Láser CO₂" style="max-width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        </div>
                         <h3>Colposcopia</h3>
                         <ul>
                             <li>Condilomas acuminados del cuello uterino, vagina y vulva</li>
@@ -2229,12 +2242,7 @@
             <div class="ba-grid">
                 <div class="ba-card">
                     <div class="ba-images">
-                        <div class="ba-before">
-                            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=600&q=80" alt="Antes">
-                        </div>
-                        <div class="ba-after">
-                            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=600&q=80" alt="Después">
-                        </div>
+                        <img src="https://i.ibb.co/YT4Qwy9d/R.png" alt="Tratamiento de Condilomas con láser CO₂" style="width:100%; height:100%; object-fit:cover;">
                     </div>
                     <div class="ba-content">
                         <h3>Tratamiento de Condilomas</h3>
@@ -2248,12 +2256,7 @@
                 
                 <div class="ba-card">
                     <div class="ba-images">
-                        <div class="ba-before">
-                            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=600&q=80" alt="Antes">
-                        </div>
-                        <div class="ba-after">
-                            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=600&q=80" alt="Después">
-                        </div>
+                        <img src="https://i.ibb.co/q3VFZ31S/grados-iii-y-iv-endometriosis-2048x870.png" alt="Endometriosis pélvica grados III y IV" style="width:100%; height:100%; object-fit:cover;">
                     </div>
                     <div class="ba-content">
                         <h3>Endometriosis Pélvica</h3>
@@ -2267,12 +2270,7 @@
                 
                 <div class="ba-card">
                     <div class="ba-images">
-                        <div class="ba-before">
-                            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=600&q=80" alt="Antes">
-                        </div>
-                        <div class="ba-after">
-                            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=600&q=80" alt="Después">
-                        </div>
+                        <img src="https://i.ibb.co/YT4Qwy9d/R.png" alt="Rejuvenecimiento Vaginal" style="width:100%; height:100%; object-fit:cover;">
                     </div>
                     <div class="ba-content">
                         <h3>Rejuvenecimiento Vaginal</h3>
